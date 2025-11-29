@@ -1,0 +1,84 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.message {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.1);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  padding: 20px;
+  max-width: 80%;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hint {
+  position: absolute;
+  bottom: 40px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+@media (max-width: 600px) {
+  .message {
+    font-size: 1.8rem;
+  }
+}
